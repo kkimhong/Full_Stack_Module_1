@@ -4,45 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wingmall</title>
-    <link href="./input.css" rel="stylesheet" />
-    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
-  <body>
-    <header class="container mx-auto py-6">
-      <nav class="flex justify-between">
-        <img src="https://wingmall.com/images/logo_wingmall.svg" alt="" />
-        <div class="py-4">
-          <ul class="flex justify-between space-x-6">
+  <body class="">
+    <header class="container mx-auto py-6 px-4 relative z-50">
+      <nav class="flex justify-between items-center">
+        <img
+          src="https://wingmall.com/images/logo_wingmall.svg"
+          alt="Wingmall Logo"
+          class="h-10" />
+
+        <button
+          id="menu-btn"
+          class="block md:hidden text-blue-900 focus:outline-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <div
+          id="mobile-menu"
+          class="hidden absolute top-20 left-0 w-full bg-white shadow-xl rounded-b-2xl p-6 md:p-0 md:static md:flex md:w-auto md:bg-transparent md:shadow-none">
+          <ul
+            class="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-6 items-center">
             <li>
               <a
                 href=""
-                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl"
+                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl block"
                 >Go</a
               >
             </li>
             <li>
               <a
                 href=""
-                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl"
+                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl block"
                 >Promotions</a
               >
             </li>
             <li>
               <a
                 href=""
-                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl"
+                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl block"
                 >News</a
               >
             </li>
             <li>
               <a
                 href=""
-                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl"
+                class="text-blue-900 text-xl font-semibold hover:bg-yellow-200 px-4 py-2 hover:rounded-xl block"
                 >About Wingmall</a
               >
             </li>
             <li>
-              <a href="" class="flex items-center gap-2">
+              <a href="" class="flex items-center gap-2 px-4 py-2">
                 <img
                   src="https://wingmall.com/images/km-icon.png"
                   alt=""
@@ -54,9 +80,13 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <section id="section" class="flex flex-row min-h-[600px] px-16">
-        <div class="flex flex-col justify-center">
+      <section
+        id="section"
+        class="flex flex-col md:flex-row max-w-7xl mx-auto items-center px-4 gap-8">
+        <div
+          class="flex-1 flex flex-col justify-center text-center md:text-left">
           <h1 class="text-5xl text-amber-300 font-bold">
             Go Sell. Go Earn. Go <br />
             Wingmall.
@@ -69,24 +99,542 @@
           </p>
           <a
             href=""
-            class="bg-blue-900 text-xl text-white rounded-full w-fit px-8 py-2"
-            >Learn More</a
-          >
+            class="bg-blue-900 text-xl text-white rounded-full w-fit px-8 py-2 hover:bg-blue-800 transition mx-auto md:mx-0">
+            Learn More
+          </a>
         </div>
-        <div class="bg-gray-100 w-full rounded-4xl">
-          <div class="h-64 text-center text-4xl font-semibold p-4 m-8">
-            Hero Img
+
+        <div class="flex-1 rounded-3xl w-full">
+          <div class="p-4 m-8 flex justify-center">
+            <img
+              class="w-full object-contain drop-shadow-xl"
+              src="https://wingmall.com/storage/uploads/2025-08/cashback_1756283446.png"
+              alt="Wingmall Cashback" />
           </div>
         </div>
       </section>
-      <section id="Promotions" class="flex flex-col text-center mt-16">
-        <h1 class="text-5xl font-bold text-blue-900">Promotions</h1>
-        <div class="flex flex-cols-3">
-          <div class="flex items-center justify-center h-24 w-24">
-            <h1>item</h1>
+
+      <section id="Promotions" class="w-full bg-gray-100 py-16 mt-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <div
+            class="relative flex flex-col md:flex-row items-center justify-center mb-12 w-full gap-4">
+            <h1 class="text-5xl font-bold text-blue-900">Promotions</h1>
+            <a
+              href=""
+              class="md:absolute md:right-0 text-xl text-blue-900 font-semibold rounded-full border-2 border-blue-900 px-4 py-2 hover:bg-blue-50 transition">
+              View More
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src="https://wingmall.com/storage/uploads/2025-10/EatShopRepeatEN_1760432381.jpg"
+                alt=""
+                class="w-full rounded-2xl h-48 object-cover" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">
+                  Win Big with Wingmall
+                </h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  Celebrate the season of joy with Wingmall and your Wing Visa
+                  Card! Order food,
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src=" https://wingmall.com/storage/uploads/2025-02/mv_1738563430.jpg"
+                alt=""
+                class="w-full h-48 object-cover rounded-2xl" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">Promo code</h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  Get $3 off on your first order on Wingmall with the variety of
+                  promo codes! Stock up...
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src="https://wingmall.com/storage/uploads/2025-02/is_1738563319.jpg"
+                alt="Promo 3"
+                class="w-full h-48 object-cover rounded-2xl" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">
+                  In store discount
+                </h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  Shopping just got a whole lot better with Wingmall. Get up to
+                  50% off on your favorite...
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src="https://wingmall.com/storage/uploads/2025-02/fs_1738563201.jpg"
+                alt="Promo 4"
+                class="w-full h-48 object-cover rounded-2xl" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">Flash Sale</h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  With Wingmall's Flash Sale, you can save big on all your
+                  favorite items! Get up to 75%
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="News" class="w-full bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+          <div
+            class="relative flex flex-col md:flex-row items-center justify-center mb-12 w-full gap-4">
+            <h1 class="text-5xl font-bold text-blue-900">News</h1>
+            <a
+              href=""
+              class="md:absolute md:right-0 text-xl text-blue-900 font-semibold rounded-full border-2 border-blue-900 px-4 py-2 hover:bg-blue-50 transition">
+              View More
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src="https://wingmall.com/storage/uploads/2025-02/n9_1738565307.jpg"
+                alt=""
+                class="w-full rounded-2xl h-48 object-cover" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">
+                  Wingmall partner with Pizza Hut
+                </h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  Now customers can order from all outlets of Pizza Hut across
+                  Phnom Penh through
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src="https://wingmall.com/storage/uploads/2025-02/n8_1738565123.jpg"
+                alt=""
+                class="w-full h-48 object-cover rounded-2xl" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">
+                  Wing Bank, Wing Market, Wingmall
+                </h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  Dealers and customers of OPPO will soon gain access to Wing
+                  Bank’s digital banking...
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src="https://wingmall.com/storage/uploads/2025-02/n7_1738565014.jpg"
+                alt="Promo 3"
+                class="w-full h-48 object-cover rounded-2xl" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">
+                  Comming soon wingmall Promotions
+                </h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  Shopping just got a whole lot better with Wingmall. Get up to
+                  50% off on your favorite...
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col text-left">
+              <img
+                src="https://wingmall.com/storage/uploads/2025-02/n6_1738564490.jpg"
+                alt="Promo 4"
+                class="w-full h-48 object-cover rounded-2xl" />
+              <div class="p-6 flex flex-col flex-1">
+                <h3 class="text-lg font-bold text-blue-900 mb-2">
+                  Wingmall emerging e-commerce
+                </h3>
+                <p class="text-black text-sm mb-4 flex-1">
+                  With Wingmall's Flash Sale, you can save big on all your
+                  favorite items! Get up to 75%
+                </p>
+                <button
+                  class="bg-blue-900 text-white py-1 px-6 rounded-full hover:bg-blue-800 transition w-fit">
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join us -->
+      <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+          <h2 class="text-5xl font-bold text-blue-900 mb-4">Join Us</h2>
+          <p class="text-lg text-gray-600">
+            Help us expand our network, and we will assist you in growing your
+            income.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+          <div class="flex flex-col">
+            <div
+              class="relative h-64 md:h-80 lg:h-96 w-full rounded-[3rem] overflow-visible flex justify-center items-end">
+              <img
+                src="https://wingmall.com/images/merchant-banner.png"
+                alt=""
+                class="relative z-10 h-[110%] object-contain -mb-4" />
+            </div>
+            <div class="mt-8">
+              <h3 class="text-2xl font-bold text-blue-900 mb-2">
+                Become Merchant
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Join Delivery and reach more customers than ever. We handle
+                delivery, so you can focus on the food.
+              </p>
+              <button
+                class="bg-blue-900 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-800 transition">
+                Get Started
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-col">
+            <div
+              class="relative h-64 md:h-80 lg:h-96 w-full rounded-[3rem] overflow-visible flex justify-center items-end">
+              <img
+                src="https://wingmall.com/images/rider-banner.png"
+                alt=""
+                class="relative z-10 h-[110%] object-contain -mb-4" />
+            </div>
+            <div class="mt-8">
+              <h3 class="text-2xl font-bold text-blue-900 mb-2">
+                Ride With Us
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Enjoy the freedom to fit work around your life, along with great
+                fees and perks.
+              </p>
+              <button
+                class="bg-blue-900 text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-800 transition">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Yellow Background Section -->
+      <section class="w-full bg-amber-400 p-8">
+        <div class="flex flex-col md:flex-row justify-around gap-8">
+          <div class="flex flex-col text-center items-center max-w-sm">
+            <img
+              class="w-fit h-48 object-cover"
+              src="https://wingmall.com/images/payment-method.png"
+              alt="" />
+            <h1 class="text-2xl text-blue-900 font-semibold py-2">
+              Payment Method
+            </h1>
+            <p class="text-md text-blue-900 font-medium py-2">
+              Pay with the top banks in Cambodia or use your bank card.
+            </p>
+          </div>
+
+          <div class="flex flex-col text-center items-center max-w-sm">
+            <img
+              class="w-fit h-48 object-cover"
+              src="https://wingmall.com/images/live-order.png"
+              alt="" />
+            <h1 class="text-2xl text-blue-900 font-semibold py-2">
+              Live Order Tracking
+            </h1>
+            <p class="text-md text-blue-900 font-medium py-2">
+              Keep tabs on your order's location at all times, from the
+              restaurant to your doorstep.
+            </p>
+          </div>
+
+          <div class="flex flex-col text-center items-center max-w-sm">
+            <img
+              class="w-fit h-48 object-cover"
+              src="https://wingmall.com/images/delivery.png"
+              alt="" />
+            <h1 class="text-2xl text-blue-900 font-semibold py-2">
+              Lightning-Fast Delivery
+            </h1>
+            <p class="text-md text-blue-900 font-medium py-2">
+              Experience Swiggy's superfast delivery for food that's fresh and
+              arrives on time.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl text-center mx-auto px-4 py-12">
+        <h1 class="text-5xl font-bold text-blue-900 py-16 my-8">
+          Where we serve
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div
+            class="rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="h-80 w-full overflow-hidden">
+              <img
+                src="https://wingmall.com/images/pp.png"
+                alt="Phnom Penh"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="bg-[#FDD835] py-4">
+              <h2 class="text-xl font-bold text-center text-blue-900">
+                Phnom Penh
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="h-80 w-full overflow-hidden">
+              <img
+                src="https://wingmall.com/images/btb.png"
+                alt="Battambang"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="bg-[#FDD835] py-4">
+              <h2 class="text-xl font-bold text-center text-blue-900">
+                Battambang
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="h-80 w-full overflow-hidden">
+              <img
+                src="https://wingmall.com/images/kps.png"
+                alt="Sihanoukville"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="bg-[#FDD835] py-4">
+              <h2 class="text-xl font-bold text-center text-blue-900">
+                Sihanoukville
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="h-80 w-full overflow-hidden">
+              <img
+                src="https://wingmall.com/images/sr.png"
+                alt="Siem Reap"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="bg-[#FDD835] py-4">
+              <h2 class="text-xl font-bold text-center text-blue-900">
+                Siem Reap
+              </h2>
+            </div>
+          </div>
+
+          <div class="rounded-xl overflow-hidden">
+            <div class="h-80 w-full overflow-hidden">
+              <img
+                src="https://wingmall.com/images/kpc.png"
+                alt="Kompong Cham"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div class="bg-[#FDD835] py-4">
+              <h2 class="text-xl font-bold text-center text-blue-900">
+                Kompong Cham
+              </h2>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="bg-white pt-16 relative">
+      <div
+        class="max-w-[1400px] mx-auto px-4 pb-12 flex flex-col md:flex-row justify-between items-start relative z-10">
+        <div class="flex gap-24 mb-8 md:mb-0">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="text-blue-900 font-semibold hover:text-amber-300 transition"
+                >Cookie</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blue-900 font-semibold hover:text-amber-300 transition"
+                >Privacy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blue-900 font-semibold hover:text-amber-300 transition"
+                >Disclaimer</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blue-900 font-semibold hover:text-amber-300 transition"
+                >Become Rider</a
+              >
+            </li>
+          </ul>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="#"
+                class="text-blue-900 font-semibold hover:text-amber-300 transition"
+                >News</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blue-900 font-semibold hover:text-amber-300 transition"
+                >Promotions</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-blue-900 font-semibold hover:text-amber-300 transition"
+                >Become Merchant</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col items-start md:items-start">
+          <h3 class="text-2xl font-bold text-blue-900 mb-4">Get App Now</h3>
+          <div class="flex gap-4">
+            <a
+              href="#"
+              class="border-2 border-amber-300 rounded-lg px-6 py-3 flex items-center gap-3 hover:bg-amber-50 transition">
+              <i class="fab fa-apple text-3xl text-black"></i>
+              <div class="flex flex-col text-left">
+                <span class="text-xs text-gray-500 leading-none mb-1"
+                  >Download on the</span
+                >
+                <span class="text-base font-bold text-black leading-none"
+                  >App Store</span
+                >
+              </div>
+            </a>
+            <a
+              href="#"
+              class="border-2 border-amber-300 rounded-lg px-6 py-3 flex items-center gap-3 hover:bg-amber-50 transition">
+              <i class="fab fa-google-play text-2xl text-black"></i>
+              <div class="flex flex-col text-left">
+                <span class="text-xs text-gray-500 leading-none mb-1"
+                  >GET IT ON</span
+                >
+                <span class="text-base font-bold text-black leading-none"
+                  >Google Play</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1e3a8a] py-6 text-white">
+        <div
+          class="max-w-[1400px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex items-center gap-2">
+            <img
+              src="https://wingmall.com/images/logo_wingmall_white.svg"
+              alt="Wingmall Logo"
+              class="h-8" />
+          </div>
+
+          <div class="flex gap-6">
+            <a
+              href="#"
+              class="bg-white text-blue-900 rounded-full w-8 h-8 flex items-center justify-center hover:bg-amber-300 transition">
+              <i class="fab fa-facebook-f text-sm"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-white text-blue-900 rounded-full w-8 h-8 flex items-center justify-center hover:bg-amber-300 transition">
+              <i class="fab fa-instagram text-sm"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-white text-blue-900 rounded-full w-8 h-8 flex items-center justify-center hover:bg-amber-300 transition">
+              <i class="fab fa-tiktok text-sm"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-white text-blue-900 rounded-full w-8 h-8 flex items-center justify-center hover:bg-amber-300 transition">
+              <i class="fab fa-youtube text-sm"></i>
+            </a>
+            <a
+              href="#"
+              class="bg-white text-blue-900 rounded-full w-8 h-8 flex items-center justify-center hover:bg-amber-300 transition">
+              <i class="fab fa-telegram text-sm"></i>
+            </a>
+          </div>
+
+          <div class="text-sm font-light opacity-80">© 2025 Wingmall</div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
