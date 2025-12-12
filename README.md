@@ -5,7 +5,7 @@ Wingmall home page clone
 <!-- Image and Font -->
 I got image from Wingmall Website and Icon is from Font Awsome
 <!-- To run this project you need to run this mpx command -->
-npx tailwindcss -i ./input.css -o ./output.css --watch
+to run this project you need to run (npx tailwindcss -i ./input.css -o ./output.css --watch)
 
 <!-- Result -->
 <!-- Mobile  -->
